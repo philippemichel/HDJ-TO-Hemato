@@ -1,0 +1,129 @@
+---
+subtitle: "Rapport Statistique V1.0"
+---
+
+```{r info}
+rm(list=ls())
+library("baseph")
+library("tidyverse")
+library("kableExtra")
+library("gtsummary")
+library("ggstats")
+# sessionInfo()
+```
+
+# Généralités
+
+```{r import}
+load("data/hdj_hemato.RData")
+```
+
+## Données manquantes
+
+```{r manquants}
+#| label: fig-manquants
+#| fig-cap: "Données manquantes"
+library(visdat)
+pros |>
+  vis_miss(warn_large_data = FALSE)
+```
+
+# Description de la population
+
+## Caractéristiques des répondants
+
+```{r caract}
+#| label: tbl-caract
+#| tbl-cap: "Caractéristiques des répondants"
+pros |>
+  select(profession, anciennete, type_etablissement) |>
+  tbl_summary(
+    missing = "no"
+  ) |>
+  bold_labels() |>
+  as_kable_extra(booktabs = TRUE) |>
+  kable_styling(latex_options = c("striped", "hold_position"))
+```
+
+# Résultats
+
+## Objectif principal — Perception du parcours patient
+
+```{r percep}
+#| label: tbl-percep
+#| tbl-cap: "Perception du parcours patient en hématologie"
+pros |>
+  select(starts_with("parcours_")) |>
+  tbl_summary(
+    missing = "no"
+  ) |>
+  bold_labels() |>
+  as_kable_extra(booktabs = TRUE) |>
+  kable_styling(latex_options = c("striped", "hold_position"))
+```
+
+## Rôle de l'hôpital de jour
+
+```{r role_hdj}
+#| label: tbl-role
+#| tbl-cap: "Rôle de l'hôpital de jour"
+pros |>
+  select(starts_with("role_hdj_")) |>
+  tbl_summary(
+    missing = "no"
+  ) |>
+  bold_labels() |>
+  as_kable_extra(booktabs = TRUE) |>
+  kable_styling(latex_options = c("striped", "hold_position"))
+```
+
+## Points forts et difficultés de l'HDJ
+
+```{r points}
+#| label: fig-points
+#| fig-cap: "Points forts et difficultés de l'HDJ selon la profession"
+pros |>
+  select(profession, starts_with("points_")) |>
+  pivot_longer(-profession) |>
+  drop_na() |>
+  ggplot(aes(y = name, fill = value)) +
+  ggstats::geom_likert() +
+  facet_wrap(~profession) +
+  labs(x = "", y = "") +
+  theme_minimal()
+```
+
+## Axes d'amélioration
+
+```{r amelio}
+#| label: fig-amelio
+#| fig-cap: "Axes d'amélioration proposés par les professionnels"
+pros |>
+  select(starts_with("amelio_")) |>
+  pivot_longer(everything()) |>
+  drop_na() |>
+  count(name, value) |>
+  ggplot(aes(x = n, y = reorder(name, n), fill = value)) +
+  geom_col() +
+  labs(x = "Nombre de répondants", y = "") +
+  theme_minimal()
+```
+
+## Coordination ville-hôpital
+
+```{r coord}
+#| label: tbl-coord
+#| tbl-cap: "Coordination ville-hôpital et continuité des soins"
+pros |>
+  select(starts_with("coord_")) |>
+  tbl_summary(
+    missing = "no"
+  ) |>
+  bold_labels() |>
+  as_kable_extra(booktabs = TRUE) |>
+  kable_styling(latex_options = c("striped", "hold_position"))
+```
+
+\printglossaries
+
+\addcontentsline{toc}{chapter}{C. Bibliographie}
