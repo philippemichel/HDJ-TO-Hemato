@@ -30,3 +30,4 @@ tmp-pdfcrop-*.tex
 fig.zip
 
 **/*.quarto_ipynb
+.Rproj.user

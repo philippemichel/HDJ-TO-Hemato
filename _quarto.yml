@@ -58,6 +58,9 @@ format:
           - style.scss
         dark: cyborg
       fontsize: 1.2em
-toc: true
+editor: source
+bibliography: stat.bib
+license: "MIT"
+echo: false
 warning: false
 message: false

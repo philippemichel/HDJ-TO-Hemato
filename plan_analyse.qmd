@@ -19,7 +19,7 @@ library("kableExtra")
 
 Le \gls{alpha} retenu sera de 0,05 & la puissance de 0,8.
 
-Vu le faible nombre de cas on ne fera pas d'hypothèse de normalité. Les variables numériques seront présentées par leur médiane avec les quartiles & comparées grâce au test non paramétrique de Wilcoxon pour séries non appariées. Les données discrètes seront présentées en nombre avec le pourcentage. L'intervalle de confiance des pourcentages (à 95 %) sera calculé par bootstrap (package `boot` [@boot]). Le test du Khi2 de Spearman sera utilisé sous réserve d'un effectif suffisant, à défaut le test exact de Fischer. Des graphiques seront réalisés pour les résultats importants (package `ggplot2` [@ggplot]). 
+Vu le faible nombre de cas on ne fera pas d'hypothèse de normalité. Les variables numériques seront présentées par leur médiane avec les quartiles & comparées grâce au test non paramétrique de Wilcoxon pour séries non appariées. Les données discrètes seront présentées en nombre avec le pourcentage. L'intervalle de confiance des pourcentages (à 95 %) sera calculé par bootstrap (package `boot` [@boot]). Le test du Khi<sup>2</sup> de Spearman sera utilisé sous réserve d'un effectif suffisant, à défaut le test exact de Fischer. Des graphiques seront réalisés pour les résultats importants (package `ggplot2` [@ggplot]). 
 
 ### Taille de l'échantillon
 
@@ -37,30 +37,23 @@ Il s'agit d'une enquête de pratique professionnelle qui comprend deux volets :
 Le décompte des données manquantes sera réalisé & présenté par un tableau ou graphique (package `visdat` [@visdat]). Les variables comportant trop de données manquantes (> 20 %) ou non utilisables ne seront pas prises en compte après validation par le promoteur.
 
 
-## Description de la population
+## Questionnaire médecins
 
 ### Caractéristiques des répondants
 
-Un tableau présentera les caractéristiques démographiques et professionnelles des répondants :
-
-- Profession (médecin, \gls{ide}, \gls{as}, \gls{cs}, autre)
-- Ancienneté dans le service
-- Type d'établissement (\gls{ch}, \gls{chu}, clinique privée)
-- Région d'exercice
+Un tableau présentera les caractéristiques démographiques et professionnelles des répondants complété par un graphique (pyramide des âges).
+e
 
 ### Analyse simple
 
-Des tableaux présenteront les résultats bruts du questionnaire avec les effectifs et pourcentages pour les \glspl{discrete} et les \glspl{mediane}/\glspl{quartiles} pour les variables numériques (package `gtsummary` [@gtsummary]).
+Des tableaux présenteront les résultats bruts du questionnaire avec les effectifs et pourcentages (package `gtsummary` [@gtsummary]). Nombre d'items sont des échelles de Likert. Dans ce cas, un tableau spécifique sera présenté complété par une représentation graphique. 
 
-### Analyse factorielle
-
-Si le nombre de cas recueillis le permet une analyse factorielle en MCA (Analyse de correspondances multiples — package `FactoMineR` [@facto]) sera réalisée.
 
 ## Objectif principal
 
-*Décrire la perception du parcours patient en \gls{hemato} & le rôle de l'\gls{hdj} par les professionnels de santé.* 
 
-Pour chaque item du questionnaire, le nombre & pourcentage de sélection ou le score moyen sera présenté avec son intervalle de confiance à 95 %. Une analyse en sous-groupes selon la profession & le type d'établissement sera réalisée par des tests de $\chi^2$ de Spearman ou test exact de Fischer selon les effectifs.
+
+Pour chaque item du questionnaire, le nombre & pourcentage de sélection ou le score moyen sera présenté avec son intervalle de confiance à 95 %. Une analyse en sous-groupes selon la profession & le type d'établissement sera réalisée par des tests de Khi<sup>2</sup> de Spearman ou test exact de Fischer selon les effectifs.
 
 ### Graphique
 
@@ -70,25 +63,24 @@ Des liens éventuels entre les réponses sélectionnées seront présentés par 
 
 ### Objectif 1
 
-*Identifier les points forts & les difficultés perçus dans l'organisation de l'\gls{hdj} d'hématologie.*
 
-Les items seront présentés en nombre & pourcentage. Une comparaison par profession sera réalisée par des tests de $\chi^2$ de Spearman ou le test exact de Fischer selon l'effectif.
+
+Les items seront présentés en nombre & pourcentage. Une comparaison par profession sera réalisée par des tests de Khi<sup>2</sup> de Spearman ou le test exact de Fischer selon l'effectif.
 
 ### Objectif 2
 
-*Recueillir les opinions des professionnels sur les axes d'amélioration de la prise en charge en \gls{hdj}.*
+
 
 Les items proposés (choix multiples ou échelle de \gls{likert}) seront présentés par des tableaux & des graphiques (package `ggstats` [@ggstats]).
 
 ### Objectif 3
 
-*Évaluer la connaissance des professionnels sur les spécificités de la prise en charge hématologique en \gls{hdj} (chimiothérapies, immunothérapies, thérapies ciblées).*
 
-Les réponses seront présentées en nombre & pourcentage avec comparaison entre professions par des tests de $\chi^2$ de Spearman.
+
+Les réponses seront présentées en nombre & pourcentage avec comparaison entre professions par des tests de Khi<sup>2</sup> de Spearman.
 
 ### Objectif 4
 
-*Analyser la coordination ville-hôpital & la continuité des soins perçues par les professionnels.*
 
 Les items seront présentés en nombre & pourcentage. Des graphiques en Ridgeline (package `ggridges` [@ggridges]) compareront les réponses entre les professions.
 
@@ -101,7 +93,5 @@ L'analyse statistique sera réalisée avec le logiciel **R** [@rstat] & divers p
 Un dépôt GitHub sera utilisé qui ne comprendra que le code & non les données ou résultats. Au besoin un faux tableau de données sera présenté pour permettre des tests.
 
 <https://github.com/philippemichel/HDJ-TO-Hemato/>
-
-\addcontentsline{toc}{chapter}{C. Bibliographie}
 
 ::: 
