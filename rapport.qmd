@@ -1,0 +1,43 @@
+---
+title: "Rapport statistique"
+eval: false
+---
+
+# Rapport statistique
+
+
+::: {.panel-tabset}
+
+```{r info}
+rm(list=ls())
+library("baseph")
+library("tidyverse")
+library("kableExtra")
+library("gtsummary")
+library("ggstats")
+# sessionInfo()
+```
+
+## Généralités
+
+```{r}
+load("data/hdj_hemato.RData")
+```
+
+### Données manquantes
+
+
+
+## Description de la population
+
+### Caractéristiques des répondants
+
+
+
+## Résultats
+
+### Objectif principal — Perception du parcours patient
+
+`
+
+:::

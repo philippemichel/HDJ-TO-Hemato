@@ -11,21 +11,24 @@ library("tidyverse")
 library("kableExtra")
 ```
 
-# Généralités
+# Plan d'analyse statistique
+
+::: {.panel-tabset}
+
+## Généralités
 
 Le \gls{alpha} retenu sera de 0,05 & la \gls{puissance} de 0,8.
 
 Vu le faible nombre de cas on ne fera pas d'hypothèse de normalité. Les variables numériques seront présentées par leur \gls{mediane} avec les \gls{quartiles} & comparées grâce au test \gls{nonparam} de Wilcoxon pour séries non appariées. Les \gls{discrete} seront présentées en nombre avec le pourcentage. L'intervalle de confiance des pourcentages (à 95 %) sera calculé par \gls{bootstrap} (package `boot` [@boot]). Le test du $\chi^2$ de Spearman sera utilisé sous réserve d'un effectif suffisant, à défaut le test exact de Fischer. Des graphiques seront réalisés pour les résultats importants (package `ggplot2` [@ggplot]).
 
-## Taille de l'échantillon
+### Taille de l'échantillon
 
-Il s'agit d'une enquête de pratique professionnelle. La taille de l'échantillon n'est pas calculée a priori. L'objectif est de recueillir les réponses de l'ensemble des professionnels de santé impliqués dans la prise en charge des patients hématologiques dans les \glspl{hdj} de la région. Un minimum de **50 répondants** est considéré comme nécessaire pour permettre une analyse statistique exploratoire.
+Il s'agit d'une enquête de pratique professionnelle. La taille de l'échantillon n'est pas calculée a priori. L'objectif est de recueillir les réponses de l'ensemble des professionnels de santé impliqués dans la prise en charge des patients hématologiques sur l'hôpital NOVO. Une partie de l'étude repose sur des entretiens semi-dirigés. Un minimum de **30 répondants** est considéré comme nécessaire pour permettre une analyse statistique exploratoire. Vu la diversité des professions représentées qui auront a priori des approches différentes l'idéal serait 30 cas par groupe professionnel. 
 
-## Données manquantes
+### Données manquantes
 
 Le décompte des données manquantes sera réalisé & présenté par un tableau ou graphique (package `visdat` [@visdat]). Les variables comportant trop de données manquantes (> 20 %) ou non utilisables ne seront pas prises en compte après validation par le promoteur.
 
-# Plan d'analyse
 
 ## Description de la population
 
@@ -48,7 +51,7 @@ Si le nombre de cas recueillis le permet une analyse factorielle en MCA (Analyse
 
 ## Objectif principal
 
-*Décrire la perception du parcours patient en \gls{hemato} & le rôle de l'\gls{hdj} par les professionnels de santé.*
+*Décrire la perception du parcours patient en \gls{hemato} & le rôle de l'\gls{hdj} par les professionnels de santé.* 
 
 Pour chaque item du questionnaire, le nombre & pourcentage de sélection ou le score moyen sera présenté avec son intervalle de confiance à 95 %. Une analyse en sous-groupes selon la profession & le type d'établissement sera réalisée par des tests de $\chi^2$ de Spearman ou test exact de Fischer selon les effectifs.
 
@@ -84,7 +87,7 @@ Les items seront présentés en nombre & pourcentage. Des graphiques en Ridgelin
 
 \appendix
 
-# Technique
+## Technique
 
 L'analyse statistique sera réalisée avec le logiciel **R** [@rstat] & divers packages. Outre ceux cités dans le texte on utilisera en particulier `tidyverse` [@tidy] & `baseph` [@baseph].
 
@@ -92,6 +95,6 @@ Un dépôt GitHub sera utilisé qui ne comprendra que le code & non les données
 
 <https://github.com/philippemichel/HDJ-TO-Hemato/>
 
-\printglossaries
-
 \addcontentsline{toc}{chapter}{C. Bibliographie}
+
+::: 

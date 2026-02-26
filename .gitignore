@@ -51,3 +51,5 @@ README_files
 README.tex
 tmp-pdfcrop-*.tex
 fig.zip
+
+**/*.quarto_ipynb

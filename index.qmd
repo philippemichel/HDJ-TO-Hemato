@@ -1,0 +1,12 @@
+---
+title: "Généralités"
+cache: false
+---
+
+::: {.panel-tabset} 
+
+# Généralités
+
+**Investigateur principal : Mme Delphine DUVAL**
+
+:::
