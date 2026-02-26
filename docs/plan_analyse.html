@@ -94,35 +94,6 @@ div.csl-indent {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <meta property="og:title" content="HDJ-TO-Hémato">
 <meta property="og:description" content="Plan d’analyse statistique V1.0">
@@ -409,11 +380,11 @@ window.Quarto = {
 <section id="plan-danalyse-statistique" class="level1">
 <h1>Plan d’analyse statistique</h1>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Généralités</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Description de la population</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Objectif principal</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">Objectifs secondaires</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false" href="">Technique</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Généralités</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Questionnaire médecins</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Objectif principal</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">Objectifs secondaires</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false" href="">Technique</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <p>Le retenu sera de 0,05 &amp; la puissance de 0,8.</p>
-<p>Vu le faible nombre de cas on ne fera pas d’hypothèse de normalité. Les variables numériques seront présentées par leur médiane avec les quartiles &amp; comparées grâce au test non paramétrique de Wilcoxon pour séries non appariées. Les données discrètes seront présentées en nombre avec le pourcentage. L’intervalle de confiance des pourcentages (à 95 %) sera calculé par bootstrap (package <code>boot</code> <span class="citation" data-cites="boot">(<a href="#ref-boot" role="doc-biblioref">Davison et Hinkley 1997</a>)</span>). Le test du Khi2 de Spearman sera utilisé sous réserve d’un effectif suffisant, à défaut le test exact de Fischer. Des graphiques seront réalisés pour les résultats importants (package <code>ggplot2</code> <span class="citation" data-cites="ggplot">(<a href="#ref-ggplot" role="doc-biblioref">Wickham 2016</a>)</span>).</p>
+<p>Vu le faible nombre de cas on ne fera pas d’hypothèse de normalité. Les variables numériques seront présentées par leur médiane avec les quartiles &amp; comparées grâce au test non paramétrique de Wilcoxon pour séries non appariées. Les données discrètes seront présentées en nombre avec le pourcentage. L’intervalle de confiance des pourcentages (à 95 %) sera calculé par bootstrap (package <code>boot</code> <span class="citation" data-cites="boot">(<a href="#ref-boot" role="doc-biblioref">Davison et Hinkley 1997</a>)</span>). Le test du Khi<sup>2</sup> de Spearman sera utilisé sous réserve d’un effectif suffisant, à défaut le test exact de Fischer. Des graphiques seront réalisés pour les résultats importants (package <code>ggplot2</code> <span class="citation" data-cites="ggplot">(<a href="#ref-ggplot" role="doc-biblioref">Wickham 2016</a>)</span>).</p>
 <section id="taille-de-léchantillon" class="level3">
 <h3 class="anchored" data-anchor-id="taille-de-léchantillon">Taille de l’échantillon</h3>
 <p>Il s’agit d’une enquête de pratique professionnelle qui comprend deux volets :</p>
@@ -430,26 +401,15 @@ window.Quarto = {
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <section id="caractéristiques-des-répondants" class="level3">
 <h3 class="anchored" data-anchor-id="caractéristiques-des-répondants">Caractéristiques des répondants</h3>
-<p>Un tableau présentera les caractéristiques démographiques et professionnelles des répondants :</p>
-<ul>
-<li>Profession (médecin, , , , autre)</li>
-<li>Ancienneté dans le service</li>
-<li>Type d’établissement (, , clinique privée)</li>
-<li>Région d’exercice</li>
-</ul>
+<p>Un tableau présentera les caractéristiques démographiques et professionnelles des répondants complété par un graphique (pyramide des âges). e</p>
 </section>
 <section id="analyse-simple" class="level3">
 <h3 class="anchored" data-anchor-id="analyse-simple">Analyse simple</h3>
-<p>Des tableaux présenteront les résultats bruts du questionnaire avec les effectifs et pourcentages pour les et les / pour les variables numériques (package <code>gtsummary</code> <span class="citation" data-cites="gtsummary">(<a href="#ref-gtsummary" role="doc-biblioref">Sjoberg et al. 2021</a>)</span>).</p>
-</section>
-<section id="analyse-factorielle" class="level3">
-<h3 class="anchored" data-anchor-id="analyse-factorielle">Analyse factorielle</h3>
-<p>Si le nombre de cas recueillis le permet une analyse factorielle en MCA (Analyse de correspondances multiples — package <code>FactoMineR</code> <span class="citation" data-cites="facto">(<a href="#ref-facto" role="doc-biblioref">Lê, Josse, et Husson 2008</a>)</span>) sera réalisée.</p>
+<p>Des tableaux présenteront les résultats bruts du questionnaire avec les effectifs et pourcentages (package <code>gtsummary</code> <span class="citation" data-cites="gtsummary">(<a href="#ref-gtsummary" role="doc-biblioref">Sjoberg et al. 2021</a>)</span>). Nombre d’items sont des échelles de Likert. Dans ce cas, un tableau spécifique sera présenté complété par une représentation graphique.</p>
 </section>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<p><em>Décrire la perception du parcours patient en &amp; le rôle de l’ par les professionnels de santé.</em></p>
-<p>Pour chaque item du questionnaire, le nombre &amp; pourcentage de sélection ou le score moyen sera présenté avec son intervalle de confiance à 95 %. Une analyse en sous-groupes selon la profession &amp; le type d’établissement sera réalisée par des tests de <span class="math inline">\(\chi^2\)</span> de Spearman ou test exact de Fischer selon les effectifs.</p>
+<p>Pour chaque item du questionnaire, le nombre &amp; pourcentage de sélection ou le score moyen sera présenté avec son intervalle de confiance à 95 %. Une analyse en sous-groupes selon la profession &amp; le type d’établissement sera réalisée par des tests de Khi<sup>2</sup> de Spearman ou test exact de Fischer selon les effectifs.</p>
 <section id="graphique" class="level3">
 <h3 class="anchored" data-anchor-id="graphique">Graphique</h3>
 <p>Des liens éventuels entre les réponses sélectionnées seront présentés par un graphique en nœuds &amp; liens (package <code>igraph</code> <span class="citation" data-cites="igraph">(<a href="#ref-igraph" role="doc-biblioref">Csárdi et al. 2024</a>)</span>).</p>
@@ -458,23 +418,15 @@ window.Quarto = {
 <div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
 <section id="objectif-1" class="level3">
 <h3 class="anchored" data-anchor-id="objectif-1">Objectif 1</h3>
-<p><em>Identifier les points forts &amp; les difficultés perçus dans l’organisation de l’ d’hématologie.</em></p>
-<p>Les items seront présentés en nombre &amp; pourcentage. Une comparaison par profession sera réalisée par des tests de <span class="math inline">\(\chi^2\)</span> de Spearman ou le test exact de Fischer selon l’effectif.</p>
+<p>Les items seront présentés en nombre &amp; pourcentage. Une comparaison par profession sera réalisée par des tests de Khi<sup>2</sup> de Spearman ou le test exact de Fischer selon l’effectif.</p>
 </section>
 <section id="objectif-2" class="level3">
 <h3 class="anchored" data-anchor-id="objectif-2">Objectif 2</h3>
-<p><em>Recueillir les opinions des professionnels sur les axes d’amélioration de la prise en charge en .</em></p>
 <p>Les items proposés (choix multiples ou échelle de ) seront présentés par des tableaux &amp; des graphiques (package <code>ggstats</code> <span class="citation" data-cites="ggstats">(<a href="#ref-ggstats" role="doc-biblioref">Larmarange 2025</a>)</span>).</p>
 </section>
 <section id="objectif-3" class="level3">
 <h3 class="anchored" data-anchor-id="objectif-3">Objectif 3</h3>
-<p><em>Évaluer la connaissance des professionnels sur les spécificités de la prise en charge hématologique en (chimiothérapies, immunothérapies, thérapies ciblées).</em></p>
 <p>Les réponses seront présentées en nombre &amp; pourcentage avec comparaison entre professions par des tests de Khi<sup>2</sup> de Spearman.</p>
-</section>
-<section id="objectif-4" class="level3">
-<h3 class="anchored" data-anchor-id="objectif-4">Objectif 4</h3>
-<p><em>Analyser la coordination ville-hôpital &amp; la continuité des soins perçues par les professionnels.</em></p>
-<p>Les items seront présentés en nombre &amp; pourcentage. Des graphiques en Ridgeline (package <code>ggridges</code> <span class="citation" data-cites="ggridges">(<a href="#ref-ggridges" role="doc-biblioref">Wilke 2024</a>)</span>) compareront les réponses entre les professions.</p>
 </section>
 </div>
 <div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
@@ -499,9 +451,6 @@ Davison, A. C., et D. V. Hinkley. 1997. <em>Bootstrap Methods and Their Applicat
 <div id="ref-ggstats" class="csl-entry" role="listitem">
 Larmarange, Joseph. 2025. <em>ggstats: Extension to ’ggplot2’ for Plotting Stats</em>. <a href="https://CRAN.R-project.org/package=ggstats">https://CRAN.R-project.org/package=ggstats</a>.
 </div>
-<div id="ref-facto" class="csl-entry" role="listitem">
-Lê, Sébastien, Julie Josse, et François Husson. 2008. <span>«&nbsp;FactoMineR: A Package for Multivariate Analysis&nbsp;»</span>. <em>Journal of Statistical Software</em> 25 (1). <a href="https://doi.org/10.18637/jss.v025.i01">https://doi.org/10.18637/jss.v025.i01</a>.
-</div>
 <div id="ref-baseph" class="csl-entry" role="listitem">
 Michel, Philippe. 2024. <em>Baseph : un package pour les études cliniques simples</em>. Pontoise, France. <a href="https://github.com/philippemichel/baseph">https://github.com/philippemichel/baseph</a>.
 </div>
@@ -519,9 +468,6 @@ Wickham, Hadley. 2016. <em>ggplot2: Elegant Graphics for Data Analysis</em>. Spr
 </div>
 <div id="ref-tidy" class="csl-entry" role="listitem">
 Wickham, Hadley, Mara Averick, Jennifer Bryan, et al. 2019. <span>«&nbsp;Welcome to the <span>tidyverse</span>&nbsp;»</span>. <em>Journal of Open Source Software</em> 4 (43): 1686. <a href="https://doi.org/10.21105/joss.01686">https://doi.org/10.21105/joss.01686</a>.
-</div>
-<div id="ref-ggridges" class="csl-entry" role="listitem">
-Wilke, Claus O. 2024. <em>ggridges: Ridgeline Plots in ’ggplot2’</em>. <a href="https://CRAN.R-project.org/package=ggridges">https://CRAN.R-project.org/package=ggridges</a>.
 </div>
 </div></section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Réutilisation</h2><div class="quarto-appendix-contents"><div>MIT</div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

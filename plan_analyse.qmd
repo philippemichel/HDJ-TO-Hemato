@@ -79,12 +79,7 @@ Les items proposés (choix multiples ou échelle de \gls{likert}) seront présen
 
 Les réponses seront présentées en nombre & pourcentage avec comparaison entre professions par des tests de Khi<sup>2</sup> de Spearman.
 
-### Objectif 4
 
-
-Les items seront présentés en nombre & pourcentage. Des graphiques en Ridgeline (package `ggridges` [@ggridges]) compareront les réponses entre les professions.
-
-\appendix
 
 ## Technique
 

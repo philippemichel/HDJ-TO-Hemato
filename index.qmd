@@ -5,9 +5,9 @@ cache: false
 
 ::: {.panel-tabset} 
 
-# Généralités
+## Présentation
 
-**Investigateur principal : Mme Delphine DUVAL**
+Analyse de pratiques professionnelles pour la structuration d’un parcours en hôpital de jour dédié aux thérapies orales en hématologie.
 
 ## Import
 
