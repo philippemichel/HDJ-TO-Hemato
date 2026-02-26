@@ -1,6 +1,6 @@
 ---
 title: "Rapport statistique"
-eval: false
+eval: true
 ---
 
 # Rapport statistique
@@ -32,7 +32,7 @@ load("data/hdj_hemato.RData")
 
 ### Caractéristiques des répondants
 
-
+xxx
 
 ## Résultats
 

@@ -1,0 +1,72 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Généralités",
+    "section": "",
+    "text": "Généralités\n\n\nInvestigateur principal : Mme Delphine DUVAL"
+  },
+  {
+    "objectID": "plan_analyse.html",
+    "href": "plan_analyse.html",
+    "title": "Plan d’analyse statistique",
+    "section": "",
+    "text": "Code\nrm(list=ls())\nlibrary(\"baseph\")\nlibrary(\"tidyverse\")\nlibrary(\"kableExtra\")\n\n\n\nPlan d’analyse statistique\n\nGénéralitésDescription de la populationObjectif principalObjectifs secondairesTechnique\n\n\nLe retenu sera de 0,05 & la de 0,8.\nVu le faible nombre de cas on ne fera pas d’hypothèse de normalité. Les variables numériques seront présentées par leur avec les & comparées grâce au test de Wilcoxon pour séries non appariées. Les seront présentées en nombre avec le pourcentage. L’intervalle de confiance des pourcentages (à 95 %) sera calculé par (package boot [@boot]). Le test du \\(\\chi^2\\) de Spearman sera utilisé sous réserve d’un effectif suffisant, à défaut le test exact de Fischer. Des graphiques seront réalisés pour les résultats importants (package ggplot2 [@ggplot]).\n\nTaille de l’échantillon\nIl s’agit d’une enquête de pratique professionnelle. La taille de l’échantillon n’est pas calculée a priori. L’objectif est de recueillir les réponses de l’ensemble des professionnels de santé impliqués dans la prise en charge des patients hématologiques sur l’hôpital NOVO. Une partie de l’étude repose sur des entretiens semi-dirigés. Un minimum de 30 répondants est considéré comme nécessaire pour permettre une analyse statistique exploratoire. Vu la diversité des professions représentées qui auront a priori des approches différentes l’idéal serait 30 cas par groupe professionnel.\n\n\nDonnées manquantes\nLe décompte des données manquantes sera réalisé & présenté par un tableau ou graphique (package visdat [@visdat]). Les variables comportant trop de données manquantes (&gt; 20 %) ou non utilisables ne seront pas prises en compte après validation par le promoteur.\n\n\n\n\nCaractéristiques des répondants\nUn tableau présentera les caractéristiques démographiques et professionnelles des répondants :\n\nProfession (médecin, , , , autre)\nAncienneté dans le service\nType d’établissement (, , clinique privée)\nRégion d’exercice\n\n\n\nAnalyse simple\nDes tableaux présenteront les résultats bruts du questionnaire avec les effectifs et pourcentages pour les et les / pour les variables numériques (package gtsummary [@gtsummary]).\n\n\nAnalyse factorielle\nSi le nombre de cas recueillis le permet une analyse factorielle en MCA (Analyse de correspondances multiples — package FactoMineR [@facto]) sera réalisée.\n\n\n\nDécrire la perception du parcours patient en & le rôle de l’ par les professionnels de santé.\nPour chaque item du questionnaire, le nombre & pourcentage de sélection ou le score moyen sera présenté avec son intervalle de confiance à 95 %. Une analyse en sous-groupes selon la profession & le type d’établissement sera réalisée par des tests de \\(\\chi^2\\) de Spearman ou test exact de Fischer selon les effectifs.\n\nGraphique\nDes liens éventuels entre les réponses sélectionnées seront présentés par un graphique en nœuds & liens (package igraph [@igraph]).\n\n\n\n\nObjectif 1\nIdentifier les points forts & les difficultés perçus dans l’organisation de l’ d’hématologie.\nLes items seront présentés en nombre & pourcentage. Une comparaison par profession sera réalisée par des tests de \\(\\chi^2\\) de Spearman ou le test exact de Fischer selon l’effectif.\n\n\nObjectif 2\nRecueillir les opinions des professionnels sur les axes d’amélioration de la prise en charge en .\nLes items proposés (choix multiples ou échelle de ) seront présentés par des tableaux & des graphiques (package ggstats [@ggstats]).\n\n\nObjectif 3\nÉvaluer la connaissance des professionnels sur les spécificités de la prise en charge hématologique en (chimiothérapies, immunothérapies, thérapies ciblées).\nLes réponses seront présentées en nombre & pourcentage avec comparaison entre professions par des tests de \\(\\chi^2\\) de Spearman.\n\n\nObjectif 4\nAnalyser la coordination ville-hôpital & la continuité des soins perçues par les professionnels.\nLes items seront présentés en nombre & pourcentage. Des graphiques en Ridgeline (package ggridges [@ggridges]) compareront les réponses entre les professions.\n\n\n\nL’analyse statistique sera réalisée avec le logiciel R [@rstat] & divers packages. Outre ceux cités dans le texte on utilisera en particulier tidyverse [@tidy] & baseph [@baseph].\nUn dépôt GitHub sera utilisé qui ne comprendra que le code & non les données ou résultats. Au besoin un faux tableau de données sera présenté pour permettre des tests.\nhttps://github.com/philippemichel/HDJ-TO-Hemato/"
+  },
+  {
+    "objectID": "plan_analyse.html#taille-de-léchantillon",
+    "href": "plan_analyse.html#taille-de-léchantillon",
+    "title": "Généralités",
+    "section": "Taille de l’échantillon",
+    "text": "Taille de l’échantillon\nIl s’agit d’une enquête de pratique professionnelle. La taille de l’échantillon n’est pas calculée a priori. L’objectif est de recueillir les réponses de l’ensemble des professionnels de santé impliqués dans la prise en charge des patients hématologiques sur l’hôpital NOVO. Une partie de l’étude repose sur des entretiens semi-dirigés. Un minimum de 30 répondants est considéré comme nécessaire pour permettre une analyse statistique exploratoire. Vu la diversité des professions représentées qui auront a priori des approches différentes l’idéal serait 30 cas par groupe professionnel."
+  },
+  {
+    "objectID": "plan_analyse.html#données-manquantes",
+    "href": "plan_analyse.html#données-manquantes",
+    "title": "Généralités",
+    "section": "Données manquantes",
+    "text": "Données manquantes\nLe décompte des données manquantes sera réalisé & présenté par un tableau ou graphique (package visdat [@visdat]). Les variables comportant trop de données manquantes (&gt; 20 %) ou non utilisables ne seront pas prises en compte après validation par le promoteur."
+  },
+  {
+    "objectID": "plan_analyse.html#description-de-la-population",
+    "href": "plan_analyse.html#description-de-la-population",
+    "title": "Plan d’analyse statistique",
+    "section": "Description de la population",
+    "text": "Description de la population\n\nCaractéristiques des répondants\nUn tableau présentera les caractéristiques démographiques et professionnelles des répondants :\n\nProfession (médecin, , , , autre)\nAncienneté dans le service\nType d’établissement (, , clinique privée)\nRégion d’exercice\n\n\n\nAnalyse simple\nDes tableaux présenteront les résultats bruts du questionnaire avec les effectifs et pourcentages pour les et les / pour les variables numériques (package gtsummary [@gtsummary]).\n\n\nAnalyse factorielle\nSi le nombre de cas recueillis le permet une analyse factorielle en MCA (Analyse de correspondances multiples — package FactoMineR [@facto]) sera réalisée."
+  },
+  {
+    "objectID": "plan_analyse.html#objectif-principal",
+    "href": "plan_analyse.html#objectif-principal",
+    "title": "Plan d’analyse statistique",
+    "section": "Objectif principal",
+    "text": "Objectif principal\nDécrire la perception du parcours patient en & le rôle de l’ par les professionnels de santé.\nPour chaque item du questionnaire, le nombre & pourcentage de sélection ou le score moyen sera présenté avec son intervalle de confiance à 95 %. Une analyse en sous-groupes selon la profession & le type d’établissement sera réalisée par des tests de \\(\\chi^2\\) de Spearman ou test exact de Fischer selon les effectifs.\n\nGraphique\nDes liens éventuels entre les réponses sélectionnées seront présentés par un graphique en nœuds & liens (package igraph [@igraph])."
+  },
+  {
+    "objectID": "plan_analyse.html#objectifs-secondaires",
+    "href": "plan_analyse.html#objectifs-secondaires",
+    "title": "Plan d’analyse statistique",
+    "section": "Objectifs secondaires",
+    "text": "Objectifs secondaires\n\nObjectif 1\nIdentifier les points forts & les difficultés perçus dans l’organisation de l’ d’hématologie.\nLes items seront présentés en nombre & pourcentage. Une comparaison par profession sera réalisée par des tests de \\(\\chi^2\\) de Spearman ou le test exact de Fischer selon l’effectif.\n\n\nObjectif 2\nRecueillir les opinions des professionnels sur les axes d’amélioration de la prise en charge en .\nLes items proposés (choix multiples ou échelle de ) seront présentés par des tableaux & des graphiques (package ggstats [@ggstats]).\n\n\nObjectif 3\nÉvaluer la connaissance des professionnels sur les spécificités de la prise en charge hématologique en (chimiothérapies, immunothérapies, thérapies ciblées).\nLes réponses seront présentées en nombre & pourcentage avec comparaison entre professions par des tests de \\(\\chi^2\\) de Spearman.\n\n\nObjectif 4\nAnalyser la coordination ville-hôpital & la continuité des soins perçues par les professionnels.\nLes items seront présentés en nombre & pourcentage. Des graphiques en Ridgeline (package ggridges [@ggridges]) compareront les réponses entre les professions."
+  },
+  {
+    "objectID": "plan_analyse.html#généralités",
+    "href": "plan_analyse.html#généralités",
+    "title": "Plan d’analyse statistique",
+    "section": "Généralités",
+    "text": "Généralités\nLe retenu sera de 0,05 & la de 0,8.\nVu le faible nombre de cas on ne fera pas d’hypothèse de normalité. Les variables numériques seront présentées par leur avec les & comparées grâce au test de Wilcoxon pour séries non appariées. Les seront présentées en nombre avec le pourcentage. L’intervalle de confiance des pourcentages (à 95 %) sera calculé par (package boot [@boot]). Le test du \\(\\chi^2\\) de Spearman sera utilisé sous réserve d’un effectif suffisant, à défaut le test exact de Fischer. Des graphiques seront réalisés pour les résultats importants (package ggplot2 [@ggplot]).\n\nTaille de l’échantillon\nIl s’agit d’une enquête de pratique professionnelle. La taille de l’échantillon n’est pas calculée a priori. L’objectif est de recueillir les réponses de l’ensemble des professionnels de santé impliqués dans la prise en charge des patients hématologiques sur l’hôpital NOVO. Une partie de l’étude repose sur des entretiens semi-dirigés. Un minimum de 30 répondants est considéré comme nécessaire pour permettre une analyse statistique exploratoire. Vu la diversité des professions représentées qui auront a priori des approches différentes l’idéal serait 30 cas par groupe professionnel.\n\n\nDonnées manquantes\nLe décompte des données manquantes sera réalisé & présenté par un tableau ou graphique (package visdat [@visdat]). Les variables comportant trop de données manquantes (&gt; 20 %) ou non utilisables ne seront pas prises en compte après validation par le promoteur."
+  },
+  {
+    "objectID": "rapport.html",
+    "href": "rapport.html",
+    "title": "Rapport statistique",
+    "section": "",
+    "text": "Rapport statistique\n\nGénéralitésDescription de la populationRésultats\n\n\n\n\nCode\nload(\"data/hdj_hemato.RData\")\n\n\n\nDonnées manquantes\n\n\n\n\nCaractéristiques des répondants\n\n\n\n\nObjectif principal — Perception du parcours patient\n`"
+  },
+  {
+    "objectID": "index.html#import",
+    "href": "index.html#import",
+    "title": "Généralités",
+    "section": "Import",
+    "text": "Import"
+  }
+]

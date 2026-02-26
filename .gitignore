@@ -1,4 +1,4 @@
-# History files
+d# History files
 .Rhistory
 .Rapp.history
 # Session Data files
@@ -27,8 +27,7 @@ vignettes/*.pdf
 *.knit.md
 # R Environment Variables
 .Renviron
-# pkgdown site
-docs/
+# pkgdown sit
 # translation temp files
 po/*~
 # RStudio Connect folder

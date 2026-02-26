@@ -19,7 +19,7 @@ library("kableExtra")
 
 Le \gls{alpha} retenu sera de 0,05 & la \gls{puissance} de 0,8.
 
-Vu le faible nombre de cas on ne fera pas d'hypothèse de normalité. Les variables numériques seront présentées par leur \gls{mediane} avec les \gls{quartiles} & comparées grâce au test \gls{nonparam} de Wilcoxon pour séries non appariées. Les \gls{discrete} seront présentées en nombre avec le pourcentage. L'intervalle de confiance des pourcentages (à 95 %) sera calculé par \gls{bootstrap} (package `boot` [@boot]). Le test du $\chi^2$ de Spearman sera utilisé sous réserve d'un effectif suffisant, à défaut le test exact de Fischer. Des graphiques seront réalisés pour les résultats importants (package `ggplot2` [@ggplot]).
+Vu le faible nombre de cas on ne fera pas d'hypothèse de normalité. Les variables numériques seront présentées par leur \gls{mediane} avec les \gls{quartiles} & comparées grâce au test \gls{nonparam} de Wilcoxon pour séries non appariées. Les \gls{discrete} seront présentées en nombre avec le pourcentage. L'intervalle de confiance des pourcentages (à 95 %) sera calculé par \gls{bootstrap} (package `boot` [@boot]). Le test du $\chi^2$ de Spearman sera utilisé sous réserve d'un effectif suffisant, à défaut le test exact de Fischer. Des graphiques seront réalisés pour les résultats importants (package `ggplot2` [@ggplot]). 
 
 ### Taille de l'échantillon
 
