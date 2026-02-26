@@ -17,13 +17,20 @@ library("kableExtra")
 
 ## Généralités
 
-Le \gls{alpha} retenu sera de 0,05 & la \gls{puissance} de 0,8.
+Le \gls{alpha} retenu sera de 0,05 & la puissance de 0,8.
 
-Vu le faible nombre de cas on ne fera pas d'hypothèse de normalité. Les variables numériques seront présentées par leur \gls{mediane} avec les \gls{quartiles} & comparées grâce au test \gls{nonparam} de Wilcoxon pour séries non appariées. Les \gls{discrete} seront présentées en nombre avec le pourcentage. L'intervalle de confiance des pourcentages (à 95 %) sera calculé par \gls{bootstrap} (package `boot` [@boot]). Le test du $\chi^2$ de Spearman sera utilisé sous réserve d'un effectif suffisant, à défaut le test exact de Fischer. Des graphiques seront réalisés pour les résultats importants (package `ggplot2` [@ggplot]). 
+Vu le faible nombre de cas on ne fera pas d'hypothèse de normalité. Les variables numériques seront présentées par leur médiane avec les quartiles & comparées grâce au test non paramétrique de Wilcoxon pour séries non appariées. Les données discrètes seront présentées en nombre avec le pourcentage. L'intervalle de confiance des pourcentages (à 95 %) sera calculé par bootstrap (package `boot` [@boot]). Le test du Khi2 de Spearman sera utilisé sous réserve d'un effectif suffisant, à défaut le test exact de Fischer. Des graphiques seront réalisés pour les résultats importants (package `ggplot2` [@ggplot]). 
 
 ### Taille de l'échantillon
 
-Il s'agit d'une enquête de pratique professionnelle. La taille de l'échantillon n'est pas calculée a priori. L'objectif est de recueillir les réponses de l'ensemble des professionnels de santé impliqués dans la prise en charge des patients hématologiques sur l'hôpital NOVO. Une partie de l'étude repose sur des entretiens semi-dirigés. Un minimum de **30 répondants** est considéré comme nécessaire pour permettre une analyse statistique exploratoire. Vu la diversité des professions représentées qui auront a priori des approches différentes l'idéal serait 30 cas par groupe professionnel. 
+
+
+Il s'agit d'une enquête de pratique professionnelle qui comprend deux volets : 
+
+ - Un questionnaire de pratique remis aux seuls médecins. Comme toute étude purement descriptive par sondage il est difficile de définir un nombre de cas nécessaire. 
+ 
+ - Des entretiens semi-dirigés avec des professionnels de santé impliqués dans la prise en charge des patients hématologiques en HDJ. Pour ces professionnels on aura dans un premier temps un cas par catégorie professionnelle puis si possible dix cas par catégorie avec un minimum à cinq cas. 
+
 
 ### Données manquantes
 
