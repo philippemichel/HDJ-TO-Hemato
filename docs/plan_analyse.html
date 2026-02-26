@@ -383,7 +383,7 @@ div.csl-indent {
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Généralités</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Questionnaire médecins</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Objectif principal</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">Objectifs secondaires</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false" href="">Technique</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>Le retenu sera de 0,05 &amp; la puissance de 0,8.</p>
+<p>Le risque α retenu sera de 0,05 &amp; la puissance de 0,8.</p>
 <p>Vu le faible nombre de cas on ne fera pas d’hypothèse de normalité. Les variables numériques seront présentées par leur médiane avec les quartiles &amp; comparées grâce au test non paramétrique de Wilcoxon pour séries non appariées. Les données discrètes seront présentées en nombre avec le pourcentage. L’intervalle de confiance des pourcentages (à 95 %) sera calculé par bootstrap (package <code>boot</code> <span class="citation" data-cites="boot">(<a href="#ref-boot" role="doc-biblioref">Davison et Hinkley 1997</a>)</span>). Le test du Khi<sup>2</sup> de Spearman sera utilisé sous réserve d’un effectif suffisant, à défaut le test exact de Fischer. Des graphiques seront réalisés pour les résultats importants (package <code>ggplot2</code> <span class="citation" data-cites="ggplot">(<a href="#ref-ggplot" role="doc-biblioref">Wickham 2016</a>)</span>).</p>
 <section id="taille-de-léchantillon" class="level3">
 <h3 class="anchored" data-anchor-id="taille-de-léchantillon">Taille de l’échantillon</h3>
@@ -409,28 +409,23 @@ div.csl-indent {
 </section>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<p>Pour chaque item du questionnaire, le nombre &amp; pourcentage de sélection ou le score moyen sera présenté avec son intervalle de confiance à 95 %. Une analyse en sous-groupes selon la profession &amp; le type d’établissement sera réalisée par des tests de Khi<sup>2</sup> de Spearman ou test exact de Fischer selon les effectifs.</p>
 <section id="graphique" class="level3">
 <h3 class="anchored" data-anchor-id="graphique">Graphique</h3>
-<p>Des liens éventuels entre les réponses sélectionnées seront présentés par un graphique en nœuds &amp; liens (package <code>igraph</code> <span class="citation" data-cites="igraph">(<a href="#ref-igraph" role="doc-biblioref">Csárdi et al. 2024</a>)</span>).</p>
 </section>
 </div>
 <div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
 <section id="objectif-1" class="level3">
 <h3 class="anchored" data-anchor-id="objectif-1">Objectif 1</h3>
-<p>Les items seront présentés en nombre &amp; pourcentage. Une comparaison par profession sera réalisée par des tests de Khi<sup>2</sup> de Spearman ou le test exact de Fischer selon l’effectif.</p>
 </section>
 <section id="objectif-2" class="level3">
 <h3 class="anchored" data-anchor-id="objectif-2">Objectif 2</h3>
-<p>Les items proposés (choix multiples ou échelle de ) seront présentés par des tableaux &amp; des graphiques (package <code>ggstats</code> <span class="citation" data-cites="ggstats">(<a href="#ref-ggstats" role="doc-biblioref">Larmarange 2025</a>)</span>).</p>
 </section>
 <section id="objectif-3" class="level3">
 <h3 class="anchored" data-anchor-id="objectif-3">Objectif 3</h3>
-<p>Les réponses seront présentées en nombre &amp; pourcentage avec comparaison entre professions par des tests de Khi<sup>2</sup> de Spearman.</p>
 </section>
 </div>
 <div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
-<p>L’analyse statistique sera réalisée avec le logiciel <strong>R</strong> <span class="citation" data-cites="rstat">(<a href="#ref-rstat" role="doc-biblioref">R Core Team 2024</a>)</span> &amp; divers packages. Outre ceux cités dans le texte on utilisera en particulier <code>tidyverse</code> <span class="citation" data-cites="tidy">(<a href="#ref-tidy" role="doc-biblioref">Wickham et al. 2019</a>)</span> &amp; <code>baseph</code> <span class="citation" data-cites="baseph">(<a href="#ref-baseph" role="doc-biblioref">Michel 2024</a>)</span>.</p>
+<p>L’analyse statistique sera réalisée avec le logiciel <strong>R</strong> <span class="citation" data-cites="rstat">(<a href="#ref-rstat" role="doc-biblioref">R Core Team 2024</a>)</span> &amp; divers packages. Outre ceux cités dans le texte on utilisera en particulier <code>tidyverse</code> <span class="citation" data-cites="tidy">(<a href="#ref-tidy" role="doc-biblioref">Wickham et al. 2019</a>)</span> &amp; <code>baseph</code> <span class="citation" data-cites="baseph">(<a href="#ref-baseph" role="doc-biblioref">Michel 2026</a>)</span>.</p>
 <p>Un dépôt GitHub sera utilisé qui ne comprendra que le code &amp; non les données ou résultats. Au besoin un faux tableau de données sera présenté pour permettre des tests.</p>
 <p><a href="https://github.com/philippemichel/HDJ-TO-Hemato/" class="uri">https://github.com/philippemichel/HDJ-TO-Hemato/</a></p>
 </div>
@@ -442,17 +437,11 @@ div.csl-indent {
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Les références</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-igraph" class="csl-entry" role="listitem">
-Csárdi, Gábor, Tamás Nepusz, Vincent Traag, Szabolcs Horvát, Fabio Zanini, Daniel Noom, et Kirill Müller. 2024. <em><span>igraph</span>: Network Analysis and Visualization in R</em>. <a href="https://doi.org/10.5281/zenodo.7682609">https://doi.org/10.5281/zenodo.7682609</a>.
-</div>
 <div id="ref-boot" class="csl-entry" role="listitem">
 Davison, A. C., et D. V. Hinkley. 1997. <em>Bootstrap Methods and Their Applications</em>. Cambridge: Cambridge University Press. <a href="http://statwww.epfl.ch/davison/BMA/">http://statwww.epfl.ch/davison/BMA/</a>.
 </div>
-<div id="ref-ggstats" class="csl-entry" role="listitem">
-Larmarange, Joseph. 2025. <em>ggstats: Extension to ’ggplot2’ for Plotting Stats</em>. <a href="https://CRAN.R-project.org/package=ggstats">https://CRAN.R-project.org/package=ggstats</a>.
-</div>
 <div id="ref-baseph" class="csl-entry" role="listitem">
-Michel, Philippe. 2024. <em>Baseph : un package pour les études cliniques simples</em>. Pontoise, France. <a href="https://github.com/philippemichel/baseph">https://github.com/philippemichel/baseph</a>.
+Michel, Philippe. 2026. <em>Baseph : un package pour les études cliniques simples</em>. Pontoise, France. <a href="https://github.com/philippemichel/baseph">https://github.com/philippemichel/baseph</a>.
 </div>
 <div id="ref-rstat" class="csl-entry" role="listitem">
 R Core Team. 2024. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.

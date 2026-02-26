@@ -17,7 +17,7 @@ library("kableExtra")
 
 ## Généralités
 
-Le \gls{alpha} retenu sera de 0,05 & la puissance de 0,8.
+Le risque &#x3B1; retenu sera de 0,05 & la puissance de 0,8.
 
 Vu le faible nombre de cas on ne fera pas d'hypothèse de normalité. Les variables numériques seront présentées par leur médiane avec les quartiles & comparées grâce au test non paramétrique de Wilcoxon pour séries non appariées. Les données discrètes seront présentées en nombre avec le pourcentage. L'intervalle de confiance des pourcentages (à 95 %) sera calculé par bootstrap (package `boot` [@boot]). Le test du Khi<sup>2</sup> de Spearman sera utilisé sous réserve d'un effectif suffisant, à défaut le test exact de Fischer. Des graphiques seront réalisés pour les résultats importants (package `ggplot2` [@ggplot]). 
 
@@ -53,11 +53,9 @@ Des tableaux présenteront les résultats bruts du questionnaire avec les effect
 
 
 
-Pour chaque item du questionnaire, le nombre & pourcentage de sélection ou le score moyen sera présenté avec son intervalle de confiance à 95 %. Une analyse en sous-groupes selon la profession & le type d'établissement sera réalisée par des tests de Khi<sup>2</sup> de Spearman ou test exact de Fischer selon les effectifs.
 
 ### Graphique
 
-Des liens éventuels entre les réponses sélectionnées seront présentés par un graphique en nœuds & liens (package `igraph` [@igraph]).
 
 ## Objectifs secondaires
 
@@ -65,19 +63,12 @@ Des liens éventuels entre les réponses sélectionnées seront présentés par 
 
 
 
-Les items seront présentés en nombre & pourcentage. Une comparaison par profession sera réalisée par des tests de Khi<sup>2</sup> de Spearman ou le test exact de Fischer selon l'effectif.
-
 ### Objectif 2
 
 
 
-Les items proposés (choix multiples ou échelle de \gls{likert}) seront présentés par des tableaux & des graphiques (package `ggstats` [@ggstats]).
-
 ### Objectif 3
 
-
-
-Les réponses seront présentées en nombre & pourcentage avec comparaison entre professions par des tests de Khi<sup>2</sup> de Spearman.
 
 
 
