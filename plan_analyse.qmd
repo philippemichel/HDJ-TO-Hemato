@@ -17,7 +17,7 @@ library("kableExtra")
 
 ## Généralités
 
-Le risque &#x3B1; retenu sera de 0,05 & la puissance de 0,8.
+Le risque &#x3B1; retenu sera de 0,05 & la puissance de 0,8. 
 
 Vu le faible nombre de cas on ne fera pas d'hypothèse de normalité. Les variables numériques seront présentées par leur médiane avec les quartiles & comparées grâce au test non paramétrique de Wilcoxon pour séries non appariées. Les données discrètes seront présentées en nombre avec le pourcentage. L'intervalle de confiance des pourcentages (à 95 %) sera calculé par bootstrap (package `boot` [@boot]). Le test du Khi<sup>2</sup> de Spearman sera utilisé sous réserve d'un effectif suffisant, à défaut le test exact de Fischer. Des graphiques seront réalisés pour les résultats importants (package `ggplot2` [@ggplot]). 
 
@@ -46,29 +46,14 @@ e
 
 ### Analyse simple
 
-Des tableaux présenteront les résultats bruts du questionnaire avec les effectifs et pourcentages (package `gtsummary` [@gtsummary]). Nombre d'items sont des échelles de Likert. Dans ce cas, un tableau spécifique sera présenté complété par une représentation graphique. 
+Des tableaux présenteront les résultats bruts du questionnaire avec les effectifs et pourcentages (package `gtsummary` [@gtsummary]). Nombre d'items sont des échelles de Likert. Dans ce cas, un tableau spécifique sera présenté complété par une représentation graphique (package ggstats [@ggstats]). 
 
 
-## Objectif principal
+## Entretien semi-dirigés
 
+Les entretiens seront analysés par une analyse de contenu thématique (package `tidytext` [@tidytext]) après nettoyage puis réduction des mots à leur racine (*text-stemming**). Les thèmes émergents seront présentés dans un tableau. des graphiques de type nuage de mots (package `wordcloud` [@wordcloud]) pourront être réalisés.
 
-
-
-### Graphique
-
-
-## Objectifs secondaires
-
-### Objectif 1
-
-
-
-### Objectif 2
-
-
-
-### Objectif 3
-
+On étudiera les rapprochements de mots sur lles plus fréquents ou les plus significatifs.
 
 
 
